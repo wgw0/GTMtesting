@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTM Testing Site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Test Google Tag Manager Events</h1>
+        <p>Interact with this page to trigger events for GTM tracking</p>
+    </header>
+
+    <div class="container">
+        <h2>Click Test Button</h2>
+        <button id="testButton">Click Me</button>
+
+        <div class="form-group">
+            <h2>Form Submission Test</h2>
+            <form id="testForm">
+                <input type="text" id="name" placeholder="Enter your name" required>
+                <input type="submit" value="Submit Form">
+            </form>
+        </div>
+
+        <div class="output" id="output"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
