@@ -5,10 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GTM Testing Site</title>
+
+    <!-- Google Tag Manager -->
+    <script>
+        // Immediately Invoked Function Expression (IIFE) to execute GTM setup code
+        (function(w, d, s, l, i) {
+            // Create a new array or use an existing dataLayer array
+            w[l] = w[l] || [];
+            // Push the initialization event with the current timestamp
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+
+            // Select the first <script> tag in the document
+            var f = d.getElementsByTagName(s)[0];
+            // Create a new <script> element for loading the GTM JavaScript file
+            var j = d.createElement(s);
+            // If a custom name is used for the dataLayer, add it as a query parameter
+            var dl = l != 'dataLayer' ? '&l=' + l : '';
+            // Load the script asynchronously for better page performance
+            j.async = true;
+            // Set the source of the <script> to the GTM JavaScript file with the provided container ID
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            // Insert the new <script> element before the first <script> tag in the document
+            f.parentNode.insertBefore(j, f);
+        })(
+            // Pass the necessary arguments:
+            window, // Reference to the global window object
+            document, // The DOM document object
+            'script', // Specify the element tag name for the script
+            'dataLayer', // The name of the global variable for GTM (default is 'dataLayer')
+            'GTM-NZR3HZ4G' // The unique container ID for this GTM instance
+        );
+    </script>
+    <!-- End Google Tag Manager -->
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZR3HZ4G" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <header>
         <h1>Test Google Tag Manager Events</h1>
         <p>Interact with this page to trigger events for GTM tracking</p>
